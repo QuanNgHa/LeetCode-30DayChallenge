@@ -50,7 +50,9 @@ def maxSubArray(nums):
         if max_sum < current_sum:
             max_sum = current_sum
         if current_sum < 0:
-            current_sum = 0  # Start over the new sum at the next index
+            # Start over the new sum at the next index
+            # as previous indexes contains negative numbers, which not help for Max Sum
+            current_sum = 0
 
     return max_sum
 
